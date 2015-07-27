@@ -1,7 +1,7 @@
 /*******************************************************************************
  *        File: TechnicalMechanism.java
  *    Revision: 1
- * Description: 
+ * Description: CEE Technical Mechanism
  *   Author(s): Morteza Ansarinia <ansarinia@me.com>
  *  Created on: July 27, 2014
  *     Project: itrc.cskb

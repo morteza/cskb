@@ -1,7 +1,7 @@
 /*******************************************************************************
  *        File: Resource.java
  *    Revision: 1
- * Description: 
+ * Description: CEE Resource
  *   Author(s): Morteza Ansarinia <ansarinia@me.com>
  *  Created on: July 27, 2014
  *     Project: itrc.cskb
