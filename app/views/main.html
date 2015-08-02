@@ -10,9 +10,10 @@
         <link rel="shortcut icon" type="image/png" href="@{'/public/img/favicon.png'}">
     </head>
     <body>
-        #{doLayout /}
+    
+      #{doLayout /}
 
-        <script src="@{'/public/js/jquery.min.js'}" type="text/javascript" charset="utf-8"></script>
-        #{get 'moreScripts' /}
+      <script src="@{'/public/js/jquery.min.js'}" type="text/javascript" charset="utf-8"></script>
+      #{get 'moreScripts' /}
     </body>
 </html>
