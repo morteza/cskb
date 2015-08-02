@@ -1,7 +1,7 @@
 /*******************************************************************************
- *        File: CCEList.java
+ *        File: Resource.java
  *    Revision: 1
- * Description: CEE List
+ * Description: CEE Resource
  *   Author(s): Morteza Ansarinia <ansarinia@me.com>, Ali Sheykhi <ali.sheykhi@me.com
  *  Created on: April 14, 2015
  *     Project: itrc.cskb
@@ -12,22 +12,19 @@ package models.cce;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 
 import models.ModelWithTimestamp;
+import play.data.validation.Unique;
 
-@Entity(name="cce_list")
-public class CCEList extends ModelWithTimestamp {
-  public String version;
-  
-  
-  public Date ccesModifiedAt;
-  @OneToMany
-  public List<cces> cces;
-  
-  
-  public Date resourceModifiedAt;
-  @OneToMany
-  public List<Resource> resources;
+@Entity(name="cce_parameter")
+public class Parameter extends ModelWithTimestamp {
+
+  @Lob
+  @Column(columnDefinition="TEXT")
+  public String parameter;
+
 }

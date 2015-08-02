@@ -2,7 +2,7 @@
  *        File: ModelWithTimestamp.java
  *    Revision: 1
  * Description: Data models with createdAt and modifiedAt timestamps.
- *   Author(s): Morteza Ansarinia <ansarinia@me.com>
+ *   Author(s): Morteza Ansarinia <ansarinia@me.com>, Ali Sheykhi <ali.sheykhi@me.com
  *  Created on: April 14, 2015
  *     Project: itrc.cskb
  *   Copyright: See the file "LICENSE" for the full license governing this code.
