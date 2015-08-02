@@ -1,3 +1,52 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+
+
+# Default CRUD messages
+# ~~~~~~
+
+crud.title=مدیریت
+crud.home=مدیریت
+crud.blank=جدید
+crud.index.title=یکی از موارد را برای تغییر انتخاب نمایید
+crud.index.objectType=Object type
+crud.index.add=جدید
+crud.add=&{%s} جدید
+crud.list.title=&{%s}
+crud.list.size=تعداد: %d
+crud.list.totalSize=%d total
+crud.pagination.previous=« Previous
+crud.pagination.next=Next »
+crud.pagination.last=Last »»
+crud.pagination.first=«« First
+crud.show.title=Edit &{%s}
+crud.save=ذخیره شود
+crud.saveAndContinue=Save and continue editing
+crud.cancel=کنسل
+crud.hasErrors=لطفا خطاها را تصحیح نمایید.
+crud.blank.title=&{%s} جدید
+crud.saveAndAddAnother=Save and create another
+crud.delete=حذف
+crud.created=The &{%s} has been created
+crud.saved=The &{%s} has been saved
+crud.deleted=The &{%s} has been deleted
+crud.delete.error=این مورد را نمی‌توان حذف نمود.
+crud.search=جستجو
+crud.none=(هیچ‌کدام)
+crud.selectValue=(یکی از موارد را انتخاب نمایید)
+crud.return=بازگشت
+
+crud.help.required=الزامی
+crud.help.minlength=Min length is %d.
+crud.help.maxlength=Max length is %d.
+crud.help.email=آدرس ایمیل معتبر.
+crud.help.dateformat=&{%s} format.
+crud.help.numeric=مقدار عددی.
+crud.help.min=Must be greater than %d.
+crud.help.future=تاریخ باید در آینده باشد.
+crud.help.past=تاریخ باید در گذشته باشد.
+crud.help.after=After %s.
+crud.help.before=Before %s.
+crud.help.range=Between %d and %d

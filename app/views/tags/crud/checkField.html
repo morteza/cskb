@@ -1,0 +1,14 @@
+#{field 'object.' + _name}
+<div class="form-group">
+  <div class="checkbox">
+	  <label for="${field.id}">
+	    <input id="${field.id}" class="${field.errorClass} checkbox" type="checkbox" name="${field.name}" value="true" ${(params[field.name] ? params.getAll(field.name)[0] == 'true' : _value) ? 'checked="true"'.raw() : ''} />
+	    <input type="hidden" name="${field.name}" value="false" />
+	    &{_name}
+	  </label>
+  </div>
+    #{ifError field.name}
+        <span class="error">${field.error.raw()}</span>
+    #{/ifError}
+</div>
+#{/field}
