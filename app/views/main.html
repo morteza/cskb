@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 
+
 <html>
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" media="screen" href="@{'/public/css/main.css'}">
+        
+        <link rel="stylesheet" type="text/css" href="/public/css/semantic.rtl.css">
+		<script src="/public/js/semantic.min.js"></script>
+		
+
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/img/favicon.png'}">
     </head>
     <body>
+    <div class="ui compact menu">
+  <a class="item">
+    <i class="gamepad icon"></i>
+    Games
+  </a>
+  <a class="item">
+    <i class="video camera icon"></i>
+    Channels
+  </a>
+  <a class="item">
+    <i class="video play icon"></i>
+    Videos
+  </a>
+  
+  <div class="ui right menu">
+  <div class="ui right category search item">
+    <div class="ui transparent icon input">
+      <input class="prompt" placeholder="Search animals..." type="text">
+      <i class="search link icon"></i>
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<div class="ui segment">
+  <p></p>
+</div>
+</div> </br></br></br>
+	
+	<button class="ui red button">Red</button>
+	<button class="ui orange button">Orange</button>
+	<button class="ui yellow button">Yellow</button>
+	<button class="ui olive button">Olive</button>
+	<button class="ui green button">Green</button>
+	<button class="ui teal button">Teal</button>
+	<button class="ui blue button">Blue</button>
+	<button class="ui violet button">Violet</button>
+	<button class="ui purple button">Purple</button>
+	<button class="ui pink button">Pink</button>
+	<button class="ui brown button">Brown</button>
+	<button class="ui grey button">Grey</button>
+	<button class="ui black button">Black</button>
+	
+	
+	
+	
         #{doLayout /}
 
         <script src="@{'/public/js/jquery.min.js'}" type="text/javascript" charset="utf-8"></script>
