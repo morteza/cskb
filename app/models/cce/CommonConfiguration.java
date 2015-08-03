@@ -21,26 +21,26 @@ import javax.persistence.OneToMany;
 import models.ModelWithTimestamp;
 import play.data.validation.Unique;
 
-@Entity(name = "cces")
-public class cces extends ModelWithTimestamp {
+@Entity(name = "cce_common_configuration")
+public class CommonConfiguration extends ModelWithTimestamp {
 
-	public String platform;
-	public Boolean isDeprecated;
-	public Date modifiedAt;
-	
-	@Unique
-	public String cceId;
-	
-	@Lob
-	@Column(columnDefinition = "TEXT")
-	public String description;
+  public String platform;
+  public Boolean isDeprecated;
+  public Date modifiedAt;
 
-	@OneToMany
-	public List<Parameter> parameters;
+  @Unique
+  public String cceId;
 
-	@OneToMany
-	public List<TechnicalMechanism> technicalMechanism;
-	
-	@OneToMany
-	public List<Reference> references; 
+  @Lob
+  @Column(columnDefinition = "TEXT")
+  public String description;
+
+  @OneToMany
+  public List<Parameter> parameters;
+
+  @OneToMany
+  public List<TechnicalMechanism> technicalMechanisms;
+
+  @OneToMany
+  public List<Reference> references;
 }

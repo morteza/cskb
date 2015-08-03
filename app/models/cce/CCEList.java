@@ -17,16 +17,14 @@ import javax.persistence.OneToMany;
 
 import models.ModelWithTimestamp;
 
-@Entity(name="cce_list")
+@Entity(name = "cce_list")
 public class CCEList extends ModelWithTimestamp {
   public String version;
-  
-  
+
   public Date ccesModifiedAt;
   @OneToMany
-  public List<cces> cces;
-  
-  
+  public List<CommonConfiguration> commonConfiguration;
+
   public Date resourceModifiedAt;
   @OneToMany
   public List<Resource> resources;

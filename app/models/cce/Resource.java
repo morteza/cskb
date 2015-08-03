@@ -23,20 +23,20 @@ import play.data.validation.Unique;
 @Entity(name = "cce_resource")
 public class Resource extends ModelWithTimestamp {
 
-	@Unique
-	@Lob
-	@Column(columnDefinition = "TEXT")
-	public String resourceId;
+  @Unique
+  @Lob
+  @Column(columnDefinition = "TEXT")
+  public String resourceId;
 
-	public String title;
-	public String version;
-	public String format;
-	public Date issuedAt;
-	public String creator;
-	public String publisher;
+  public String title;
+  public String version;
+  public String format;
+  public Date issuedAt;
+  public String creator;
+  public String publisher;
 
-	@Lob
-	@Column(columnDefinition = "TEXT")
-	public String notes;
+  @Lob
+  @Column(columnDefinition = "TEXT")
+  public String notes;
 
 }

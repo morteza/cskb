@@ -23,13 +23,13 @@ import play.data.validation.Unique;
 @Entity(name = "cce_reference")
 public class Reference extends ModelWithTimestamp {
 
-	@Unique
-	@Lob
-	@Column(columnDefinition = "TEXT")
-	public String resourceId;  
-	
-	@Lob
-	@Column(columnDefinition = "TEXT")
-	public String reference;
+  @Unique
+  @Lob
+  @Column(columnDefinition = "TEXT")
+  public String resourceId;
+
+  @Lob
+  @Column(columnDefinition = "TEXT")
+  public String reference;
 
 }

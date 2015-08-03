@@ -20,8 +20,8 @@ import models.ModelWithTimestamp;
 @Entity(name = "cce_technical_mechanism")
 public class TechnicalMechanism extends ModelWithTimestamp {
 
-	@Lob
-	@Column(columnDefinition = "TEXT")
-	public String technicalMechanism;
+  @Lob
+  @Column(columnDefinition = "TEXT")
+  public String technicalMechanism;
 
 }
