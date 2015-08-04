@@ -21,11 +21,11 @@ import models.ModelWithTimestamp;
 public class CCEList extends ModelWithTimestamp {
   public String version;
 
-  public Date ccesModifiedAt;
+  public Date configurationsModifiedAt;
   @OneToMany
-  public List<CommonConfiguration> commonConfiguration;
+  public List<Configuration> configurations;
 
-  public Date resourceModifiedAt;
+  public Date resourcesModifiedAt;
   @OneToMany
   public List<Resource> resources;
 }

@@ -1,7 +1,7 @@
 /*******************************************************************************
- *        File: Reference.java
+ *        File: CCEItem.java
  *    Revision: 1
- * Description: CEE Reference
+ * Description: CEE Item
  *   Author(s): Morteza Ansarinia <ansarinia@me.com>, Ali Sheykhi <ali.sheykhi@me.com
  *  Created on: April 14, 2015
  *     Project: itrc.cskb
@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
@@ -20,16 +21,26 @@ import javax.persistence.OneToMany;
 import models.ModelWithTimestamp;
 import play.data.validation.Unique;
 
-@Entity(name = "cce_reference")
-public class Reference extends ModelWithTimestamp {
+@Entity(name = "cce_configuration")
+public class Configuration extends ModelWithTimestamp {
+
+  public String platform;
+  public Boolean isDeprecated;
+  public Date configurationModifiedAt;
 
   @Unique
-  @Lob
-  @Column(columnDefinition = "TEXT")
-  public String resourceId;
+  public String cceId;
 
   @Lob
   @Column(columnDefinition = "TEXT")
-  public String part;
+  public String description;
 
+  @ElementCollection
+  public List<String> parameters;
+
+  @ElementCollection
+  public List<String> technicalMechanisms;
+
+  @OneToMany
+  public List<Reference> references;
 }

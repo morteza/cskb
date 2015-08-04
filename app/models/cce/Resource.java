@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
@@ -32,7 +33,8 @@ public class Resource extends ModelWithTimestamp {
   public String version;
   public String format;
   public Date issuedAt;
-  public String creator;
+  @ElementCollection
+  public List<String> creators;
   public String publisher;
 
   @Lob
