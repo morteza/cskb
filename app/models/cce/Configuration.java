@@ -9,6 +9,7 @@
  *******************************************************************************/
 package models.cce;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -43,4 +44,15 @@ public class Configuration extends ModelWithTimestamp {
 
   @OneToMany
   public List<Reference> references;
+  
+  public Configuration() {
+    platform = "";
+    isDeprecated = null;
+    configurationModifiedAt = new Date();
+    cceId = "";
+    description = "";
+    parameters = new ArrayList<String>();
+    technicalMechanisms = new ArrayList<String>();
+    references = new ArrayList<Reference>();   
+  }
 }

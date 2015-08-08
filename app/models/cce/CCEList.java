@@ -9,12 +9,14 @@
  *******************************************************************************/
 package models.cce;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import models.ModelWithTimestamp;
 
 @Entity(name = "cce_list")
@@ -28,4 +30,12 @@ public class CCEList extends ModelWithTimestamp {
   public Date resourcesModifiedAt;
   @OneToMany
   public List<Resource> resources;
+  
+  public CCEList() {
+    version = "";
+    configurationsModifiedAt = new Date();
+    configurations = new ArrayList<Configuration>();
+    resourcesModifiedAt = new Date();
+    resources = new ArrayList<Resource>();
+  }
 }

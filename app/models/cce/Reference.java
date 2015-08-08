@@ -32,4 +32,8 @@ public class Reference extends ModelWithTimestamp {
   @Column(columnDefinition = "TEXT")
   public String part;
 
+  public Reference() {
+    resourceId = "";
+    part = "";
+  }
 }

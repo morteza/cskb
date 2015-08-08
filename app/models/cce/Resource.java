@@ -9,6 +9,7 @@
  *******************************************************************************/
 package models.cce;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -41,4 +42,17 @@ public class Resource extends ModelWithTimestamp {
   @Column(columnDefinition = "TEXT")
   public String notes;
 
+  public Resource() {
+    creators = new ArrayList<String>();
+    issuedAt = new Date ();
+    resourceId = "";
+    title = "";
+    version = "";
+    format = "";
+    publisher = "";
+    notes = "";
+  }
+
+  
+  
 }
