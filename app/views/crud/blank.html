@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:messages.get('crud.blank.title', type.modelName) /}
+
+#{crud.navigation /}
+
+<div class="ui sixteen wide basic segment">
+#{form action:@create(), enctype:'multipart/form-data', class:'ui form'}
+  #{crud.form /}  
+        
+  <div class="ui divider"></div>
+  <p class="crudButtons">
+    <input type="submit" class="ui primary button" name="_save" value="&{'crud.save', type.modelName}" />
+    <a type="button" class="ui default button">&{'crud.return'}</a>
+  </p>
+#{/form}
+</div>

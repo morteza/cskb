@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:messages.get('crud.title') /}
+
+<div class="ui doubling grid container">
+
+#{crud.navigation /}
+
+	<div id="ui cards">
+	  #{crud.types}
+	      <div class="ui card">
+	        <div class="content">
+	          <a href="${type.blankAction}" class="right floated compact button">
+	            <i class="add icon"></i>
+	          </a>
+	          <a class="header" href="${type.listAction}">&{type.name}</a>
+	          <div class="description">${type.controllerClass.description()}</div>
+	        </div>
+	      </div>
+	  #{/crud.types}
+	</div>
+</div>

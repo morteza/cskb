@@ -1,0 +1,26 @@
+<div class="ui sixteen wide column basic segment">
+<div class="ui breadcrumb">
+#{if request.actionMethod == 'index'}
+    <a class="section" href="@{Application.index()}"><i class="home icon"></i></a>
+    <i class="right angle icon divider"></i>
+    <a class="section" href="@{CRUD.index()}">&{'crud.home'}</a>
+#{/if}
+#{else}
+    <a class="section" href="@{Application.index()}"><i class="home icon"></i></a>
+    <i class="right angle icon divider"></i>
+    <a class="section" href="@{CRUD.index()}">&{'crud.home'}</a>
+    #{if _caller.type}
+      <i class="right angle icon divider"></i>
+      <a class="section" href="@{list()}">&{_caller.type.name}</a>
+    #{/if}
+    #{if _caller.object?._key()}
+      <i class="right angle icon divider"></i>
+      <a class="section" href="@{show(_caller.object._key())}">${_caller.object?.toString()?.escape()?.raw()}</a></li>
+    #{/if}
+    #{if request.actionMethod == 'blank' || request.actionMethod == 'create'}
+      <i class="right angle icon divider"></i>
+      <a class="section" href="@{blank()}">&{'crud.blank'}</a>
+    #{/if}
+#{/else}
+</div>
+</div>

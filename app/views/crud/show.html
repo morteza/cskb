@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:messages.get('crud.blank.title', type.modelName) /}
+
+#{crud.navigation /}
+
+<div class="ui sixteen wide basic segment">
+#{form action:@save(object._key()), enctype:'multipart/form-data', class:'ui form'}
+  #{crud.form /}  
+        
+  <div class="ui divider"></div>
+  <p class="crudButtons">
+    <input type="submit" class="ui primary button" name="_save" value="&{'crud.save', type.modelName}" />
+    <a href="@{delete(object._key())}" class="ui right floated red button">&{'crud.delete'}</a>
+  </p>
+#{/form}
+</div>

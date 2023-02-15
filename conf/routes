@@ -11,5 +11,23 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+
+# Routes for the CRUD module
+# ~~~~~~~~~~~
+
+#{crud.types}
+GET     /crud/?                                      ${type.controllerClass.name.substring(12).replace('$','')}.index
+GET     /crud/${type.controllerName}                 ${type.controllerClass.name.substring(12).replace('$','')}.list
+GET     /crud/${type.controllerName}/new             ${type.controllerClass.name.substring(12).replace('$','')}.blank
+GET     /crud/${type.controllerName}/{id}            ${type.controllerClass.name.substring(12).replace('$','')}.show
+GET     /crud/${type.controllerName}/{id}/{field}    ${type.controllerClass.name.substring(12).replace('$','')}.attachment
+GET     /crud/${type.controllerName}/{id}/edit       ${type.controllerClass.name.substring(12).replace('$','')}.edit
+POST    /crud/${type.controllerName}                 ${type.controllerClass.name.substring(12).replace('$','')}.create
+POST    /crud/${type.controllerName}/{id}            ${type.controllerClass.name.substring(12).replace('$','')}.save
+GET     /crud/delete/${type.controllerName}/{id}     ${type.controllerClass.name.substring(12).replace('$','')}.delete
+#{/crud.types}
+GET     /crud/?                                      CRUD.index
+
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
